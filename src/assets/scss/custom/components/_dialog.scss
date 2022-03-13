@@ -1,0 +1,59 @@
+/* ==============
+  admin - reject applicants
+===================*/
+
+#first-name-in-dialog-title { 
+  color: #B09B6A;
+}
+
+.applicant-rejection-dialog-wrapper {
+  margin: 0; 
+  width: 100%;
+  min-width: 400px;
+  border: 1px solid gainsboro;
+
+  tr {
+    .applicant-rejection-title-wrapper {
+      vertical-align: middle;
+      padding: 0 4px;
+      max-width: 56px;
+      
+      sup {
+        .allowed {
+          color: green;
+        }
+
+        .not-allowed {
+          color: red;
+        }
+      }
+    }
+
+    .applicant-rejection-reason-wrapper {
+      padding-top: 8px;
+
+      textarea {
+        width: 99%;
+      }
+
+      textarea:focus {
+        box-shadow: 1px 2px #CADAFD, -1px -2px #CADAFD;
+      }
+    }
+  }
+}
+
+
+/* ==============
+  admin - create bulletin board
+===================*/
+#bulletin-board-creation-content {
+  input {
+    width: 100%;
+  }
+  span {
+    width: 50%;
+    font-size: 0.8rem;
+    color: red;
+  }
+}

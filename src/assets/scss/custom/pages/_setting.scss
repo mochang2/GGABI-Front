@@ -1,0 +1,135 @@
+/* sidebar */
+.card {
+  .setting-list {
+    .active {
+      color: #0272F4;
+    }
+
+    .inactive {
+      color: #888888;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+    .setting-list {
+      display: flex;
+
+      a {
+        margin: 0 0.6rem 0 0.2rem;
+      }
+      a:first-child {
+        margin-left: 1.2rem;
+      }
+      a::after {
+        content: "|";
+        color: inherit !important;
+        margin-left: 1.2rem;
+      }
+      a:last-child::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .card {
+    .setting-list {
+      display: inline-block;
+
+      a {
+        margin: 0;
+      }
+      a:first-child {
+        margin-left: 0;
+      }
+      a::after {
+        content: none;
+      }
+    }
+  }
+}
+
+
+/* main-content */
+.card {
+  .withdraw-page-title {
+    margin: 0 0 0.5rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .withdraw-page-title,
+  .withdraw-letter > span {
+    color: #403B8F;
+  }
+
+  .withdraw-notice {
+    margin: 0 4px;
+  }
+
+  .withdraw-letter {
+    font-family: 'Nanum Gothic', sans-serif;
+    flex-direction: column;
+
+    textarea, input {
+      padding: 4px;
+    }
+  }
+
+  .withdraw-letter:last-child {
+    padding: 1.25rem 1.25rem 0;
+
+    .inactive-btn {
+      background: #f69321;
+      color: #fff;
+      border: none;
+      position: relative;
+      height: 48px;
+      font-size: 1.2em;
+      padding: 0 1.6em;
+      cursor: not-allowed;
+      outline: none;
+      float: right;
+    }
+    .active-btn {
+      background: #f69321;
+      color: #fff;
+      border: none;
+      position: relative;
+      height: 48px;
+      font-size: 1.2em;
+      padding: 0 1.6em;
+      cursor: pointer;
+      transition: 800ms ease all;
+      outline: none;
+      float: right;
+    }
+    .active-btn:hover{
+      background: #fff;
+      color: #f69321;
+    }
+    .active-btn:before,button:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background: #f69321;
+      transition: 400ms ease all;
+    }
+    .active-btn:after{
+      right: inherit;
+      top: inherit;
+      left: 0;
+      bottom: 0;
+    }
+    .active-btn:hover:before,button:hover:after{
+      width: 100%;
+      transition: 800ms ease all;
+    }
+  }
+}

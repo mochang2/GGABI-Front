@@ -1,0 +1,558 @@
+// 
+// authentication.scss
+//
+
+/* login */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+.login-form-outer-wrapper {
+	display: flex;
+	justify-content: center;
+	min-height: 108vh;
+    margin-top: 40px;
+}
+/* 전체적인 로그인 폼 */
+.screen {		
+	background: linear-gradient(90deg, #2c6fca, #6aa3f2);		
+	position: relative;	
+	height: 600px;
+	width: 360px;
+	box-shadow: 0px 0px 24px #0b3f85;
+}
+.screen-content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+.screen-background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen-background-shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+/* 배경 문양 */
+.screen-background-shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen-background-shape2 {
+	height: 220px;
+	width: 220px;
+	background: #136be3;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen-background-shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #2c6fca, #1f6dd7);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen-background-shape4 {
+	height: 400px;
+	width: 200px;
+	background: #0769ef;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+/* 로그인 인풋 */
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+.login-field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+.login-icon {
+	position: absolute;
+	top: 32px;
+	color: rgb(19,107,227);
+}
+.login-input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+.remind-password{
+	font-size: small;
+	text-decoration: none;
+	color: #7b7b7b;
+}
+.login-input:active,
+.login-input:focus,
+.login-input:hover {
+	outline: none;
+	border-bottom-color: #1f6dd7;
+}
+/* 로그인 제출 */
+.login-submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #0068f6;
+	box-shadow: 0px 2px 2px #0b3f85;
+	cursor: pointer;
+	transition: .2s;
+}
+.login-submit:active,
+.login-submit:focus,
+.login-submit:hover {
+	border-color: #1f6dd7;
+	outline: none;
+}
+.button-icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: rgb(19,107,227);
+}
+
+/* 로그인 에러 */
+.login-error-wrapper{
+	text-align: left;
+}
+.login-error{
+	color: #7b7b7b;
+	font-size: xx-small;
+}
+
+/* 아직 회원가입을 하지 않았으면 */
+.yet-member {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 10px;
+	color: #fff;
+}
+.yet-member {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.signup-link {
+	margin: 10px 5px;
+	padding: 10px 5px;
+	color: #fff;
+	border: 2px solid #7b7b7b;
+	border-radius: 40% / 60%;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px rgb(19,107,227);
+}
+.signup-link:hover {
+	transform: scale(1.2);	
+}
+
+
+
+/* signup */
+// signup form
+.signup-form-outer-wrapper {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  margin: 4rem 0;
+}
+
+.signup-form-inner-wrapper {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-step-wrapper {
+  background-color: #ffffff;
+  width: 60%;
+  max-height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.signup-status-bar-ul {
+  list-style: none;
+  margin: 15px 5%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.signup-first-step-li, .signup-second-step-li {
+  color: grey;
+}
+
+.signup-step-active-li {
+  color: rgb(246,147,33);
+  text-shadow: 2px 6px 2px #e5e5e5;
+}
+
+#signup-form {
+  /* border: 2px solid black; */
+  background-color: #ffffff;
+  width: 60%;
+  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 668px){
+  #signup-form, .signup-step-wrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 516px){
+  #signup-form, .signup-step-wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 452px){
+  #signup-form, .signup-step-wrapper {
+    width: 100%;
+  }
+}
+
+
+// signup first step
+/* terms and conditions */
+/* .terms-and-conditions-outer-wrapper {
+  border: 2px dotted black;
+} */
+
+.all-terms-and-conditions-wrapper {
+  margin: 8px 20px;
+  font-size: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.nth-terms-and-conditions-wrapper {
+  margin: 0 12px;
+}
+
+/* .first-terms-and-conditions-wrapper {
+  border: 2px solid aqua;
+} */
+
+.show-details-and-checkbox-wrapper {
+  /* border: 2px solid antiquewhite; */
+  display: flex;
+  margin: 2px 8px;
+  justify-content: space-between;
+}
+
+.show-terms-and-conditions-details-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* background-color: azure; */
+}
+.show-terms-and-conditions-details-wrapper:hover {
+  cursor: pointer;
+}
+
+/* .terms-and-conditions-checkbox-wrapper {} */
+
+span.necessary-or-optional-checkbox {
+  font-weight: bold;
+  color: rgb(15,21,74);
+}
+
+.signup-agreement-content-wrapper {
+  margin: 2px 8px;
+  display: none; /* flex */
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-agreement-content {
+  border: 1px solid rgb(15,21,74);
+  padding: 2px;
+  width: 90%;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.signup-agreement-content,
+.signup-agreement-content > div,
+.signup-agreement-content > b,
+.signup-agreement-content > b > u {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* signup inputs */
+.signup-inputs-outer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* common class */
+.signup-inputs-separate-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px dashed black; */
+  margin: 1rem 16%;
+}
+
+.signup-inputs-upper-wrapper {
+  display: flex;
+  margin: 1px 8px;
+}
+
+span.necessary-or-optional-inputs {
+  font-style: italic;
+  color: gray;
+  font-size: 14px;
+}
+
+.check-if-duplicated-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0B6EFD;
+  padding: 0 8px;
+  height: 30px;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.check-if-duplicated-wrapper:hover {
+  cursor: pointer;
+}
+
+.signup-inputs-middle-wrapper {
+  margin: 0 8px 4px;
+}
+
+.signup-inputs {
+  height: 25px;
+}
+.signup-inputs:focus {
+  background-color: #efefef;
+}
+
+/* personal class */
+.signup-id-inputs-upper-wrapper, .signup-nickname-inputs-upper-wrapper {
+  justify-content: space-between;
+}
+
+.signup-id-input, .signup-passwd-input,
+.signup-passwdconfirm-input, .signup-nickname-input,
+.signup-phonenum-input, .signup-email-input {
+  width: 65%;
+  min-width: 330px;
+}
+
+.signup-passwd-inputs-bottom-wrapper,
+.signup-passwdconfirm-inputs-bottom-wrapper,
+.signup-phonenum-inputs-bottom-wrapper, 
+.signup-email-inputs-bottom-wrapper {
+  color: red;
+  font-size: 8px;
+  margin: 2px 8px;
+}
+
+.signup-department-input, .signup-position-input {
+  width: 45%;
+}
+
+.signup-gender-inputs-middle-wrapper {
+  display: flex;
+}
+
+.signup-gender-male-wrapper, .signup-gender-female-wrapper {
+  display: flex;
+  padding-left: 5%;
+}
+
+/* btn wrapper */
+.signup-submit-and-signup-cancel-btn-wrapper {
+  margin: 15px 20% 0 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.signup-related-btn {
+  padding: 10px 15px;
+  font-size: 15px;
+  text-decoration: none;
+}
+.signup-related-btn:hover {
+  cursor: pointer;
+}
+
+.signup-submit-btn {
+  background-color: rgb(246,147,33);
+  color: white;
+  border: 1px rgb(246,147,33) solid;
+}
+
+.signup-cancel-btn {
+  background-color: white;
+  border: 1px #e5e5e5 solid;
+  color: black;
+  white-space: nowrap;
+}
+
+
+/* responsive */
+@media screen and (max-width: 848px){
+  .signup-id-input, .signup-passwd-input,
+  .signup-passwdconfirm-input, .signup-nickname-input,
+  .signup-phonenum-input, .signup-email-input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 810px){
+  .signup-inputs-separate-wrapper {
+    margin: 1rem 5%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .signup-inputs-separate-wrapper {
+    margin: 1rem 2%;
+  }
+}
+
+
+// signup second step
+/* .signup-success-wrapper {
+} */
+
+.signup-success-logo-wrapper {
+  display: flex;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-success-logo-img {
+  /* 환영합니다 로고 추가하기 */
+  width: 50%; 
+  height: auto;
+}
+
+.signup-submit-and-signup-cancel-btn-wrapper > .signup-submit-btn:hover {
+color: white;
+text-decoration: none;
+}
+
+.signup-submit-and-signup-cancel-btn-wrapper > .signup-cancel-btn:hover {
+color: black;
+text-decoration: none;
+}
+
+
+
+
+
+
+
+// authentication
+
+.authentication-bg{
+  background-color: $auth-bg;
+  .auth-logo{
+    .logo{
+      margin: 0px auto;
+    }
+  }
+}
+
+
+// signin card title
+
+.signin-other-title{
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: $border-color;
+    top: 10px;
+  }
+
+  .title{
+    display: inline-block;
+    position: relative;
+    z-index: 9;
+    background-color: $card-bg;
+    padding: 2px 16px;
+  }
+}
+
+
+// auth carousel
+
+.auth-carousel{
+  &.owl-theme {
+    .owl-dots {
+      .owl-dot {
+        span{
+          background-color: $card-bg;
+        }
+        &.active{
+          span{
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

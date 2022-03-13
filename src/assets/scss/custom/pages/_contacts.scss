@@ -1,0 +1,95 @@
+/* ==============
+  Contacts Sidebar
+===================*/
+.contacts-leftbar-wrapper {
+  width: 85px;
+  padding: 5px;
+  position: fixed;
+  margin-right: 1rem;
+
+  .create-btn-wrapper,
+  .title-wrapper {
+    justify-content: center;
+
+    button,
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  .side-wrapper {
+    padding: 0 6px;
+
+    .col {
+      padding: 0 calc(var(--bs-gutter-x) * .6);
+      font-size: 1rem;
+
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+/* ==============
+  Contacts Grid
+===================*/
+.contacts-content-wrapper {
+  margin-left: 100px;
+}
+
+.contact-grid-detail-wrapper {
+  .phone-info-wrapper,
+  .email-info-wrapper {
+    font-family: initial;
+
+    svg {
+      margin-right: 4px;
+    }
+
+    span {
+      font-family: initial;
+    }
+  }
+
+  .email-info-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+/* ==============
+  Responsive
+===================*/
+@media screen and (max-width: 576px) {
+  .contacts-leftbar-wrapper {
+    width: 70px;
+  
+    .create-btn-wrapper,
+    .title-wrapper {
+      button,
+      span {
+        font-size: 1rem;
+      }
+    }
+  
+    .side-wrapper {
+      .col {
+        padding: 0 calc(var(--bs-gutter-x) * .4);
+        font-size: inherit;
+      }
+    }
+  }
+
+  .contacts-content-wrapper {
+    margin-left: 80px;
+  }
+}

@@ -1,0 +1,23 @@
+.outer-wrapper-in-auth-header{ 
+    width: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-wrapper-in-auth-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logo-img-in-header {
+    height: 50px;
+    width: auto;
+}
+.logo-img-in-header:hover {
+    cursor: pointer;
+}
+

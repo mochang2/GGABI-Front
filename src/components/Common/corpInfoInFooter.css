@@ -1,0 +1,16 @@
+/* .logo-wrapper-in-footer {
+
+} */
+
+.logo-img-in-footer {
+    height: 10px;
+    width: auto;
+    margin-right: 8px;
+}
+.logo-img-in-footer:hover {
+    cursor: pointer;
+}
+
+.corp-info-text-wrapper-in-footer {
+    font-size: 10px;
+}

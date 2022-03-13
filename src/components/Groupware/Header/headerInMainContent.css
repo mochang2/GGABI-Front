@@ -1,0 +1,5 @@
+.main-content-header-container{
+    display: flex;
+    height: 64px;
+    align-items: center;
+}

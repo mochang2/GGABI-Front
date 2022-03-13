@@ -1,0 +1,17 @@
+.mail-reservation-tooltip-date-time-wrapper {
+  margin: 0.8rem 0.2rem 0.1rem;
+  background-color: lightcoral;
+
+  input {
+    padding: 0 2px;
+  }
+}
+
+.mail-reservation-tooltip-bottom-wrapper {
+  justify-content: flex-end;
+
+  button {
+    margin: 0.4rem 0 0.2rem 0.4rem;
+    padding: 0.2rem 0.4rem;
+  }
+}

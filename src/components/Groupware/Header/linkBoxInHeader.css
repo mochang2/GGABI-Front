@@ -1,0 +1,15 @@
+.linkbox-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.linkboxes-placer {
+    display: flex;
+    align-items: center;
+}
+
+.link-text-wrapper {
+    margin-right: 15px;
+}

@@ -1,0 +1,653 @@
+/* employee management */
+
+.card {
+  .card-body {
+    .card-title { /* 사원 목록 (n명) */
+      .card-title-wrapper {
+        margin-left: 10px;
+        font-family: sans-serif;
+      }
+    }
+
+    div { /* function btn */
+      .employee-management-function-btn {
+        display: block;
+        padding: 0.25rem 0.75rem;
+        margin: 2px 0.25rem;
+      }
+
+      .employee-management-more-btn {
+        display: none;
+      }
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .card {
+    .card-body {
+      div { /* function btn */
+        .employee-management-function-btn {
+          display: none;
+        }
+
+        .employee-management-more-btn {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+/* analysis */
+.tab-content {
+  .tab-pane {
+    .mt-5 {
+      .bar-graph-description {
+        justify-content: center;
+        margin: 10px 0;
+        font-size: 14px;
+        color: #706551;
+
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+        font-family: 'Nanum Myeongjo', serif;
+      }
+    }
+  }
+}
+
+.card {
+  .card-body {
+    .float-end {
+      .d-flex {
+        .input-group {
+          height: 2rem;
+
+          div {
+            .input-group-text {
+              padding: 0.25rem 0.65rem;
+            }
+          }
+
+          .form-control { /* input tag */
+            width: 62px;
+            padding: 0.2rem 0.65rem; 
+          }
+        }
+      }
+    }
+
+    .mt-5 {
+      .donut-chart-sizing-wrapper {
+        max-width: 600px;
+        margin-left: 2%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 16%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1138px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 14%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 12%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 10%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 8%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 994px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 16%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 908px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 14%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 868px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 12%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 832px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 10%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 808px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 8%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 6%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 4%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 722px) {
+  .card {
+    .card-body {
+      .mt-5 {
+        .donut-chart-sizing-wrapper {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/* gather company emails */
+/* tooltip */
+.search-tooltip-outer-wrapper {
+  .d-flex {
+    .container-fluid {
+      .row {
+        .filter-column {
+          padding: 0;
+
+          label {
+            margin-left: 4px;
+          }
+
+          select, input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            padding: 0 2px;
+            border: 1px solid grey;
+          }
+
+          select {
+            position: relative;
+            background: transparent;
+            z-index: 8;
+            
+            option {
+              background-color: rgb(253,251,231);
+              color: rgb(131,124,98);
+            }
+          }
+
+          span {
+            position: absolute;
+            right: 8px;
+          }
+        }
+
+        .col-sm-2 {
+          margin: 2px 5px 0;
+          width: 80px;
+          position: relative;
+        }
+
+        .col-sm-3 {
+          margin: 2px 5px 0;
+          width: 120px;
+          position: relative;
+        }
+
+        .col-sm-7 {
+          margin: 10px 5px 0;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+// _email.scss에도 있음.
+#dangerous {
+  background-color: #FF6157;
+}
+#warning {
+  background-color: #FEBC2E;
+}
+#normal {
+  background-color: #2ACD43;
+}
+#undetermined {
+  background-color: #dfdfdf;
+}
+*/
+
+
+.card {
+  .card-body {
+    .mail-list {
+      display: block;
+      padding-left: 0;
+      height: 1010px;
+      overflow-y: auto;
+
+      li {
+        position: relative;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        cursor: default;
+        transition-duration: .3s;
+
+        a{
+          color: $gray-600;
+        }
+
+        &:hover {
+          background: $gray-300;
+          transition-duration: .05s;
+        }
+
+        .col-mail {
+          float: left;
+        }
+
+        .col-mail-1 {
+          position: relative;
+          width: 100%;
+          min-width: 300px;
+          justify-content: space-between;
+
+          .traffic-light-sender-and-receiver-wrapper {
+            .mail-traffic-light {
+              position: absolute;
+              top: 20px;
+              left: 10px;
+              right: 0;
+              border-radius: 50%;
+              width: 12px;
+              height: 12px; 
+            }
+
+            .sender-and-receiver {
+              position: absolute;
+              top: 0;
+              left: 40px;
+              right: 0;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              margin-bottom: 0;
+              max-width: 450px;
+            }   
+          }      
+            
+          .date-analysis-wrapper {  
+            @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+            font-family: 'Unica One', cursive;
+            font-size: 12px;
+            right: 0;
+            width: 170px;
+            padding-left: 16px;
+            max-height: 50px;
+
+            span {
+              font-family: inherit;
+            }
+
+            #mail-volumn-span {
+              margin-right: 10px;
+            }
+
+            svg.mail-analysis-report-link {
+              position: absolute;
+              right: 20px;
+              top: 16px;
+              cursor: pointer;
+              color: #5B73E8;
+            }
+          }
+        }
+
+        .col-mail-2 {
+          position: absolute;
+          top: -2px;
+          left: 500px;
+          right: 30px;
+          bottom: 0;
+
+          .subject {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 200px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: default;
+          }
+
+          a {
+            padding: 12px 1px;
+          }
+
+        }
+
+        &.active,
+        &.active:hover {
+          box-shadow: inset 3px 0 0 $primary;
+        }
+ 
+      &.unread  {
+        background-color: $gray-300;
+        font-weight: 500;
+        color: darken($dark,5%);
+
+          a{
+            color: darken($dark,5%);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+
+    .mail-list::-webkit-scrollbar {
+      width: 8px;
+    }
+    .mail-list::-webkit-scrollbar-thumb {
+      background-color: grey;
+      border-radius: 10px;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+    .mail-list::-webkit-scrollbar-track {
+      background-color: #eeeeee;
+      border-radius: 10px;
+      box-shadow: inset 0px 0px 5px white;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+  .card {
+    .card-body {
+      padding: 1.25rem 0.75rem;
+      .mail-list {
+        
+        li {
+          .col-mail-1 {
+            .traffic-light-sender-and-receiver-wrapper {  
+              .sender-and-receiver {
+                max-width: 410px
+              }
+            }
+            
+            .date-analysis-wrapper{
+              font-size: 11px;
+              padding-left: 60px;
+            }
+          }
+
+          .col-mail-2 {
+            left: 450px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .card {
+    .card-body {
+      padding: 1.25rem 0.75rem;
+      .mail-list {
+        
+        li {
+          .col-mail-1 {
+            .traffic-light-sender-and-receiver-wrapper {  
+              .sender-and-receiver {
+                max-width: 380px
+              }
+            }
+            
+            .date-analysis-wrapper{
+              font-size: 11px;
+              padding-left: 60px;
+            }
+          }
+
+          .col-mail-2 {
+            left: 420px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    .card-body {
+      padding: 1.25rem 0.75rem;
+      .mail-list {
+        
+        li {
+          .col-mail-1 {
+            .traffic-light-sender-and-receiver-wrapper {
+              .mail-traffic-light {
+                top: 22px;
+                left: 0;
+                width: 8px;
+                height: 8px; 
+              }
+  
+              .sender-and-receiver {
+                left: 20px;
+                max-width: 255px;
+
+                span {
+                  font-size: smaller;
+                }
+              }
+            }
+            
+            .date-analysis-wrapper{
+              font-size: 11px;
+              padding-left: 60px;
+
+              #mail-volumn-span {
+                display: none;
+              }
+            }
+          }
+
+          .col-mail-2 {
+            left: 280px;
+
+            .subject {
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .card {
+    .card-body {
+      .mail-list {
+        li {
+          .col-mail-1 {
+            .traffic-light-sender-and-receiver-wrapper {
+              .mail-receiver-span {
+                display: none;
+              }
+            }
+          }
+
+          .col-mail-2 {
+            left: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* each-mail-analysis-wrapper */
+.each-mail-analysis-wrapper {
+  .header {
+    margin: 10px -25px 10px;
+    padding: 15px 10px 5px 10px;
+    line-height: 35px;
+    font-size: 26px;
+    font-weight: 300;
+    color: #777;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    background: #F7F7F7;
+  }
+  
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #C4E17F;
+    border-radius: 5px 5px 0 0;
+    background-image: -webkit-linear-gradient(left, #C4E17F, #C4E17F 12.5%, #F7FDCA 12.5%, #F7FDCA 25%, #FECF71 25%, #FECF71 37.5%, #F0776C 37.5%, #F0776C 50%, #DB9DBE 50%, #db9CBE 62.5%, #C49CDE 62.5%, #C49CDE 75%, #669AE1 75%, #669AE1 87.5%, #62C2E4 87.5%, #62C2E4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #C4E17F 12.5%, #F7FDCA 12.5%, #F7FDCA 25%, #FECF71 25%, #FECF71 37.5%, #F0776C 37.5%, #F0776C 50%, #DB9DBE 50%, #DB9CBE 62.5%, #C49CDE 62.5%, #C49CDE 75%, #669AE1 75%, #669AE1 87.5%, #62C2E4 87.5%, #62C2E4);
+    background-image: -o-linear-gradient(left, #C4E17F, #C4E17F 12.5%, #F7FDCC 12.5%, #F7FDCA 25%, #FECF71 25%, #FECF71 37.5%, #F0776C 37.5%, #F0776C 50%, #DB9DBE 50%, #DB9DBE 62.5%, #C49CDE 62.5%, #C49CDE 75%, #669AE1 75%, #669AE1 87.5%, #62C2E4 87.5%, #62C2E4);
+    background-image: linear-gradient(to right, #C4E17F, #C4E17F 12.5%, #F7FDCA 12.5%, #F7FDCA 25%, #FECF71 25%, #FECF71 37.5%, #F0776C 37.5%, #F0776C 50%, #DB9DBE 50%, #DB9CBE 62.5%, #c49cde 62.5%, #C49CDE 75%, #669AE1 75%, #669AE1 87.5%, #62c2e4 87.5%, #62C2E4);
+  }
+
+  .flag-classification,
+  .short-URL-inclusion {
+    justify-content: center;
+  }
+
+  .attachments-list {
+    ul {
+      list-style: none;
+
+      li {
+        position: relative;
+
+        .attachment-file-name-wrapper {
+          max-width: 60%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-right: 2%;
+        }
+
+        .mail-traffic-light {
+          border-radius: 50%;
+          width: 12px;
+          height: 12px;
+          position: relative;
+          top: 6px;
+          left: 10px;
+        }
+      }
+    }
+  }
+}

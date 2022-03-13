@@ -1,0 +1,14 @@
+
+.text-opening-modal-in-footer {
+    cursor: pointer;
+    font-size: 10px;
+}
+.text-opening-modal-in-footer::after {
+    content: " |\00a0";
+}
+.text-opening-modal-in-footer:last-child::after {
+    content: none;
+}
+.text-opening-modal-in-footer:hover {
+    text-decoration: underline;
+}

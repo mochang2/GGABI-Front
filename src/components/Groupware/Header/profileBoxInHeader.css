@@ -1,0 +1,15 @@
+.profilebox-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profilebox-placer {
+    display: flex;
+    align-items: center;
+}
+
+.profile-related-pic-wrapper {
+    margin-right: 15px;
+}

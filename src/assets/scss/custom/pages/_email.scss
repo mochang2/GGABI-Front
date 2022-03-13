@@ -1,0 +1,523 @@
+.text-font-nanumGothic {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* ==============
+  Email inbox
+===================*/
+.email-leftbar {
+  width: 236px;
+  float: left;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.email-leftbar > .mailbox-option-wrapper {
+  padding: 2px 5px 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-leftbar > .mailbox-option-wrapper > .mailbox-volume-placer {
+  padding-top: 8px;
+}
+
+.email-leftbar > .mailbox-option-wrapper > .mailbox-volume-placer > span {
+  font-family: initial;
+  font-size: 0.8rem;
+}
+
+.email-leftbar > .mailbox-option-wrapper > .mailbox-option-placer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.email-rightbar {
+  margin-left: 260px;
+}
+
+.email-toolbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .mail-num-in-one-view-wrapper {
+    @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+    font-family: 'Unica One', cursive;
+
+    select {
+      option {
+        font-family: 'Unica One', cursive;
+      }
+    }
+  }
+}
+
+.chat-user-box {
+  p.user-title {
+    color: $dark;
+    font-weight: 500;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+.previous-and-next-mail-wrapper{
+  font-family: sans-serif;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+@media screen and (max-width: 1192px) {
+  .previous-and-next-mail-wrapper {
+    width: 85%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .previous-and-next-mail-wrapper {
+    width: 80%
+  }
+}
+
+@media (max-width: 767px) {
+  .email-leftbar {
+    float: none;
+    width: 100%;
+  }
+  .email-rightbar {
+    margin: 0;
+  }
+}
+
+
+
+/* ==============
+  Email sidebar
+===================*/
+.mail-list {
+  a {
+    display: block;
+    color: $gray-600;
+    line-height: 24px;
+    padding: 8px 5px;
+    
+    &.active {
+      color: $red !important;
+    }
+
+    .float-end { // span(expressing mail count)
+      font-family: sans-serif;
+      margin-top: -4px;
+    }
+  }
+}
+
+
+// traffic light color
+#dangerous {
+  background-color: #FF6157;
+}
+#warning {
+  background-color: #FEBC2E;
+}
+#normal {
+  background-color: #2ACD43;
+}
+#undetermined {
+  background-color: #dfdfdf;
+}
+
+
+.message-list {
+  display: block;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    cursor: default;
+    transition-duration: .3s;
+
+    a{
+      color: $gray-600;
+    }
+
+    &:hover {
+      background: $gray-300;
+      transition-duration: .05s;
+    }
+
+    .col-mail {
+      float: left;
+      position: relative;
+    }
+
+    .col-mail-1 {
+      width: 300px;
+
+      .star-toggle,
+      .checkbox-wrapper-mail,
+      .dot {
+        display: block;
+        float: left;
+      }
+
+      .checkbox-wrapper-mail {
+        margin: 4.5px 10px 0 20px;
+      }
+
+      .star-toggle {
+        margin-top: 18px;
+        margin-left: 5px;
+      }
+      .star-toggle:hover {
+        cursor: pointer;
+      }
+
+      .title {
+        position: absolute;
+        top: 0;
+        left: 110px;
+        right: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 0;
+      }
+
+      .mail-traffic-light {
+        position: absolute;
+        top: 20px;
+        left: 80px;
+        right: 0;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px; 
+      }
+    }
+
+    .col-mail-2 {
+      position: absolute;
+      top: 0;
+      left: 300px;
+      right: 0;
+      bottom: 0;
+
+      .subject,
+      .date-analysis-wrapper {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .subject {
+        left: 0;
+        right: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .date-analysis-wrapper {
+        font-size: 12px;
+        right: 0;
+        width: 170px;
+        padding-left: 60px;
+      }
+
+      .date-analysis-wrapper > a {
+        @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+        font-family: 'Unica One', cursive;
+      }
+    }
+    
+  &.unread  {
+    background-color: $gray-300;
+    font-weight: 500;
+    color: darken($dark,5%);
+      a{
+        color: darken($dark,5%);
+        font-weight: 500;
+      }
+    }
+  }
+
+
+  .checkbox-wrapper-mail {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .message-list li .col-mail-1 {
+      width: 200px;
+  }
+}
+
+
+/* pagination */
+.pagination { 
+  display: flex; 
+  justify-content: center; 
+  margin-top: 15px; 
+  list-style: none; 
+  padding: 0; 
+} 
+
+ul.pagination li { 
+  display: inline-block; 
+  width: 30px; 
+  height: 30px; 
+  border: 1px solid #e2e2e2; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 1rem; 
+} 
+
+ul.pagination li:first-child{ 
+  border-radius: 5px 0 0 5px; 
+} 
+
+ul.pagination li:last-child{ 
+  border-radius: 0 5px 5px 0; 
+} 
+
+ul.pagination li a { 
+  text-decoration: none; color: #337ab7; font-size: 1rem; 
+} 
+
+ul.pagination li.active a { 
+  color: white; 
+} 
+
+ul.pagination li.active { 
+  background-color: #337ab7; 
+} 
+
+ul.pagination li a:hover, ul.pagination li a.active { 
+  color: blue; 
+} 
+
+.page-selection { 
+  width: 48px; 
+  height: 30px; 
+  color: #337ab7; 
+}
+
+
+
+/* ==============
+  Email inbox read
+===================*/
+
+.card {
+  .card-body {
+    .media {
+
+      .media-body {
+        h5 {
+          .mail-traffic-light {
+            margin: 1px 0 0 10px;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px; 
+          }
+
+          #dangerous {
+            background-color: #FF6157;
+          }
+          #warning {
+            background-color: #FEBC2E;
+          }
+          #normal {
+            background-color: #2ACD43;
+          }
+        }
+      
+        .mail-sender-string,
+        .mail-receiver-list,
+        .mail-CC-list {
+          cursor: pointer;
+        }
+
+        .mail-receiver-list-not-first-child,
+        .mail-CC-list-not-first-child {
+          margin-left: 43px;
+        }
+      }
+    }
+
+    .shortURL-warning-outer-wrapper {
+      padding: 0 1.6rem 1rem;
+
+      .shortURL-warning-inner-wrapper {
+        background-color: #FBF1EF;
+        position: relative;
+
+        svg {
+          margin: 0.2rem;
+          position: relative;
+          top: 2px;
+          left: 4px
+        }
+
+        span {
+          margin: 0.2rem;
+        }
+
+        small {
+          margin: 0.2rem 0 0.2rem 0.2rem;
+          position: relative;
+          bottom: 2px;
+        }
+        .shortURL-link:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .mail-content-wrapper {
+      min-height: 200px;
+      padding: 0 1.6rem;
+    }
+
+    .mail-read-btn-placer {
+      float: right;
+    }
+  }
+}
+
+
+/* mail write modal */
+@media screen and (max-width: 1290px) {
+  #mail-reservation-tooltip {
+    left: 20%;
+  } 
+}
+
+@media screen and (max-width: 1265px) {
+  #mail-reservation-tooltip {
+    bottom: 12%;
+  } 
+}
+
+@media screen and (max-width: 1148px) {
+  #mail-reservation-tooltip {
+    left: 21%;
+  } 
+}
+
+@media screen and (max-width: 1022px) {
+  #mail-reservation-tooltip {
+    left: 22%;
+  } 
+}
+
+@media screen and (max-width: 944px) {
+  #mail-reservation-tooltip {
+    left: 23%;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  #mail-reservation-tooltip {
+    left: 24%;
+  } 
+}
+
+@media screen and (max-width: 818px) {
+  #mail-reservation-tooltip {
+    left: 25%;
+  } 
+}
+
+@media screen and (max-width: 746px) {
+  #mail-reservation-tooltip {
+    bottom: 10%;
+    left: 26%;
+  } 
+}
+
+@media screen and (max-width: 700px) {
+  #mail-reservation-tooltip {
+    left: 27%;
+  } 
+}
+
+@media screen and (max-width: 660px) {
+  #mail-reservation-tooltip {
+    left: 28%;
+  } 
+}
+
+@media screen and (max-width: 624px) {
+  #mail-reservation-tooltip {
+    left: 29%;
+  } 
+}
+
+@media screen and (max-width: 592px) {
+  #mail-reservation-tooltip {
+    left: 30%;
+  } 
+}
+
+@media screen and (max-width: 566px) {
+  #mail-reservation-tooltip {
+    left: 20%;
+  } 
+}
+
+@media screen and (max-width: 528px) {
+  #mail-reservation-tooltip {
+    left: 21%;
+  } 
+}
+
+@media screen and (max-width: 498px) {
+  #mail-reservation-tooltip {
+    left: 22%;
+  } 
+}
+
+@media screen and (max-width: 480px) {
+  #mail-reservation-tooltip {
+    left: 23%;
+  } 
+}
+
+@media screen and (max-width: 452px) {
+  #mail-reservation-tooltip {
+    left: 24%;
+  } 
+}
+
+@media screen and (max-width: 434px) {
+  #mail-reservation-tooltip {
+    left: 25%;
+  } 
+}
+
+@media screen and (max-width: 408px) {
+  #mail-reservation-tooltip {
+    left: 16%;
+    bottom: 9%
+  } 
+}

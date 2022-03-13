@@ -1,0 +1,9 @@
+.outer-wrapper-in-auth-footer {
+    background-color: grey;
+}
+
+.wrapper-in-auth-footer { 
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}

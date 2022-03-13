@@ -1,0 +1,131 @@
+.cursor-default {
+  cursor: default !important;
+}
+
+
+/* ==============
+  Email Approval Toolbar
+===================*/
+.email-approval-toolbar-wrapper {
+  justify-content: space-between;
+
+  .column-0-title-wrapper {
+    height: 60px;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 1.08rem;
+  }
+
+  .selectnum-wrapper {
+    height: 60px;
+    align-items: center;
+
+    .mail-num-in-one-view-wrapper {
+      max-height: 30px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+/* ==============
+  Email Message List
+===================*/
+.message-list {
+  li {
+    .col-mail-approval {
+      float: left;
+      position: relative;
+    }
+
+    .col-mail-approval-1 {
+      width: 300px;
+
+      .sender-receiver {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        right: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 0;
+      }
+    }
+
+    .col-mail-approval-2 {
+      position: absolute;
+      top: 0;
+      left: 300px;
+      right: 0;
+      bottom: 0;
+
+      .subject,
+      .date-wrapper {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .subject {
+        left: 0;
+        right: 110px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .date-wrapper {
+        font-size: 12px;
+        right: 0;
+        width: 85px;
+      }
+
+      .date-wrapper > a {
+        @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+        font-family: 'Unica One', cursive;
+      }
+    }
+  }
+}
+
+
+/* ==============
+  Email Read
+===================*/
+.approved {
+  color: #5A73E8;
+}
+.rejected {
+  color: #FF0000;
+}
+
+
+
+@media screen and (max-width: 530px) {
+  .message-list {  
+    li {  
+      .col-mail-approval-1 {
+        width: 180px;
+  
+        .sender-receiver {
+          left: 15px;
+          font-size: 12px;
+        }
+      }
+  
+      .col-mail-approval-2 {
+        left: 185px;
+  
+        .subject {
+          right: 100px;
+          font-size: 12px;
+        }
+  
+        .date-wrapper {
+          font-size: 11px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
